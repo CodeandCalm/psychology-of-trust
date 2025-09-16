@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Psychology of Trust</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+    :root {
+      --color-primary: #1f2937; /* slate-800 */
+      --color-secondary: #0ea5e9; /* sky-500 */
+      --color-bg-light: #f9fafb; /* gray-50 */
+      --color-text-dark: #111827; /* gray-900 */
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--color-bg-light);
+      color: var(--color-text-dark);
+      transition: background-color 0.4s, color 0.4s;
+    }
+
+    .slide {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+      transition: opacity 0.4s ease-in-out;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .slide.active {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+    }
+
+    .slide-content {
+      max-width: 800px;
+      background-color: white;
+      padding: 2.5rem;
+      border-radius: 1.25rem;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+      border: 2px solid var(--color-secondary);
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--color-primary);
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .visual {
+      font-size: 4rem;
+      margin: 1.5rem 0;
+    }
+
+    .button-container {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1rem;
+      z-index: 10;
+    }
+
+    button {
+      background-color: var(--color-primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    button:hover {
+      transform: scale(1.07);
+      background-color: var(--color-secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slide 0 - Title -->
+  <div id="slide0" class="slide active">
+    <div class="slide-content">
+      <h1>The Psychology of Trust</h1>
+      <p class="text-xl sm:text-2xl mt-4 text-gray-600">How Social Engineering Hacks Our Minds</p>
+      <div class="visual">🧠🔒</div>
+    </div>
+  </div>
+
+  <!-- Slide 1 - Intro -->
+  <div id="slide1" class="slide">
+    <div class="slide-content">
+      <h2>Not All Crimes Break Windows</h2>
+      <div class="visual">🚶‍♂️➡️🧠</div>
+      <ul class="text-lg sm:text-xl text-left space-y-2 mt-8">
+        <li>Social engineering = psychological manipulation</li>
+        <li>Exploits trust, authority, urgency</li>
+        <li>Targets the human mind, not the system</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 2 - Nigerian Prince -->
+  <div id="slide2" class="slide">
+    <div class="slide-content">
+      <h2>The "Nigerian Prince" Email</h2>
+      <div class="visual">👑📧</div>
+      <ul class="text-lg sm:text-xl text-left space-y-2 mt-8">
+        <li>Absurd story, bad grammar, huge fortune promise</li>
+        <li>We laugh → "Who would fall for this?"</li>
+        <li>Reality: it filters out only the vulnerable</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 3 - Reality -->
+  <div id="slide3" class="slide">
+    <div class="slide-content">
+      <h2>From Princes to CEOs</h2>
+      <div class="visual">👨‍💼💰</div>
+      <p class="text-xl mt-4 font-bold text-red-500">Case: Business Email Compromise (BEC)</p>
+      <ul class="text-lg sm:text-xl text-left space-y-2 mt-4">
+        <li>Spoofed CEO email</li>
+        <li>Urgent wire transfer request</li>
+        <li>Result: hundreds of thousands lost</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 4 - Why It Works -->
+  <div id="slide4" class="slide">
+    <div class="slide-content">
+      <h2>Hacking the Human Mind</h2>
+      <div class="visual">🧠</div>
+      <ul class="text-lg sm:text-xl text-left space-y-2 mt-8">
+        <li><strong>Authority bias:</strong> trust in leaders</li>
+        <li><strong>Urgency effect:</strong> shortcuts under pressure</li>
+        <li><strong>Default trust:</strong> humans assume honesty</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 5 - The Deeper Lesson -->
+  <div id="slide5" class="slide">
+    <div class="slide-content">
+      <h2>A “Stupid Scam” Is Never Stupid</h2>
+      <div class="visual">🔍📈</div>
+      <ul class="text-lg sm:text-xl text-left space-y-2 mt-8">
+        <li>Outlandish scams filter for easy victims</li>
+        <li>Sophisticated psychology at play</li>
+        <li>Not about gullibility, but human nature</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 6 - Protection -->
+  <div id="slide6" class="slide">
+    <div class="slide-content">
+      <h2>Building Smarter Trust</h2>
+      <div class="visual">🛡️✅</div>
+      <ul class="text-lg sm:text-xl text-left space-y-2 mt-8">
+        <li>Pause before acting on urgency</li>
+        <li>Check sender identity (domain, reply-to)</li>
+        <li>Normalize double-checking authority</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 7 - Closing -->
+  <div id="slide7" class="slide">
+    <div class="slide-content">
+      <h2>Trust, But Verify</h2>
+      <p class="text-xl sm:text-2xl mt-4 text-gray-600">Social engineering is about minds, not machines.</p>
+      <div class="visual">🧠🛡️</div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="button-container">
+    <button onclick="prevSlide()" id="prevBtn" class="bg-gray-400 opacity-50 cursor-not-allowed">Previous</button>
+    <button onclick="nextSlide()" id="nextBtn">Next</button>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+      currentSlide = index;
+      updateButtons();
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides - 1) showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) showSlide(currentSlide - 1);
+    }
+
+    function updateButtons() {
+      prevBtn.disabled = currentSlide === 0;
+      prevBtn.classList.toggle('opacity-50', currentSlide === 0);
+      prevBtn.classList.toggle('cursor-not-allowed', currentSlide === 0);
+      nextBtn.textContent = currentSlide === totalSlides - 1 ? 'Finish' : 'Next';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => showSlide(0));
+  </script>
+  <!-- Footer signature -->
+<div class="fixed bottom-4 right-4 text-sm text-gray-500">
+  <p>© 2025 Tatiana Stacul with AI support · <a href="https://www.codigocalma.com" target="_blank" class="text-sky-600 hover:underline">www.codigocalma.com</a></p>
+</div>
+
+</body>
+</html>
